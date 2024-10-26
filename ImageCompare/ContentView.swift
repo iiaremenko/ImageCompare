@@ -17,7 +17,7 @@ struct ContentView: View {
         VStack {
             HStack {
                 ImageSelectorView(
-                    title: "Select First PNG",
+                    title: "Select First Image",
                     buttonAction: {
                         viewModel.imageSelectionTapped(side: .left)
                     },
@@ -25,7 +25,7 @@ struct ContentView: View {
                 )
 
                 ImageSelectorView(
-                    title: "Select Second PNG",
+                    title: "Select Second Image",
                     buttonAction: {
                         viewModel.imageSelectionTapped(side: .right)
                     },
