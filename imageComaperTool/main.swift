@@ -19,7 +19,7 @@ if arguments.count == 3 {
     print("First argument: \(firstArgument)")
     print("Second argument: \(secondArgument)")
 } else {
-    print("Usage: imageCompareTool <imagePath1> <imagePath2>")
+    print("Usage: imageCompare <imagePath1> <imagePath2>")
 }
 
 // Create the main entry point of your application
@@ -30,12 +30,13 @@ let delegate = AppDelegate()
 app.delegate = delegate
 app.run()
 
-// Define the AppDelegate to set up the window and content view
 class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        let contentView = ContentView(path1: firstArgument, path2: secondArgument)
+        let contentView = ContentView(
+            viewModel: .init(path1: firstArgument, path2: secondArgument)
+        )
 
         window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 400, height: 600),
@@ -48,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
 
-        let menu = NSMenu(title: "ImageCompare")
+        let menu = NSMenu(title: "Image Compare")
         menu.addItem(withTitle: "Quit ImageCompare",
                      action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
         menu.addItem(withTitle: "Select All",
