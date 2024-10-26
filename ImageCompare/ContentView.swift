@@ -80,8 +80,8 @@ struct ContentView: View {
     }
 
     var diffModePicker: some View {
-        Picker("Diff Mode", selection: $viewModel.diffMode) {
-            Text("Difference").tag(ImageComparisonViewModel.DiffMode.difference)
+        Picker("Diff View", selection: $viewModel.diffMode) {
+            Text("Unified").tag(ImageComparisonViewModel.DiffMode.difference)
             Text("Slider").tag(ImageComparisonViewModel.DiffMode.hSlider)
         }
     }
