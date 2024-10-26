@@ -42,7 +42,7 @@ struct ContentView: View {
 
             diffSection
         }
-        .fileImporter(isPresented: $viewModel.showingImporter, allowedContentTypes: viewModel.allowedContentTypes) { result in
+        .fileImporter(isPresented: $viewModel.showingImporter, allowedContentTypes: ImageComparisonViewModel.allowedContentTypes) { result in
             viewModel.handleFileImport(result: result)
         }
         .alert(isPresented: $viewModel.showAlert) {
