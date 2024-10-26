@@ -35,9 +35,8 @@ Replace `/path/to/imageCompare` with the actual path to the application and `/pa
 
 ## Screenshots
 
-![Screenshot 1](path/to/screenshot1.png)
-![Screenshot 2](path/to/screenshot2.png)
-![Screenshot 3](path/to/screenshot3.png)
+![Screen Recording 2024-10-26 at 15 25 58](https://github.com/user-attachments/assets/7b6b021b-a965-44b2-9bb4-058c55ecf54b)
+
 
 ## Installation
 
