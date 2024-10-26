@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E4A512AB2CB427B10040A017 /* Exceptions for "ImageCompare" folder in "imageComaperTool" target */ = {
+		E4A512AB2CB427B10040A017 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ContentView.swift,
@@ -48,24 +48,9 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E498FC352CAED0FF00144096 /* ImageCompare */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				E4A512AB2CB427B10040A017 /* Exceptions for "ImageCompare" folder in "imageComaperTool" target */,
-			);
-			path = ImageCompare;
-			sourceTree = "<group>";
-		};
-		E498FC472CAED10000144096 /* ImageCompareTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ImageCompareTests;
-			sourceTree = "<group>";
-		};
-		E4A512A42CB427490040A017 /* imageComaperTool */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = imageComaperTool;
-			sourceTree = "<group>";
-		};
+		E498FC352CAED0FF00144096 /* ImageCompare */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E4A512AB2CB427B10040A017 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ImageCompare; sourceTree = "<group>"; };
+		E498FC472CAED10000144096 /* ImageCompareTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ImageCompareTests; sourceTree = "<group>"; };
+		E4A512A42CB427490040A017 /* imageComaperTool */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = imageComaperTool; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +191,7 @@
 				};
 			};
 			buildConfigurationList = E498FC2E2CAED0FF00144096 /* Build configuration list for PBXProject "ImageCompare" */;
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -214,7 +200,6 @@
 			);
 			mainGroup = E498FC2A2CAED0FF00144096;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = E498FC342CAED0FF00144096 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
