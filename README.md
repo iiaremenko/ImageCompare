@@ -13,16 +13,25 @@ The Image Comparison Tool is a macOS application designed to compare two images 
 - **Two Types of Diff Output**: The application supports two types of difference outputs:
   - **Diff Image**: Displays a new image highlighting the differences between the two compared images.
   - **Slider**: Provides an interactive slider to compare the two images side by side, allowing for a more intuitive visual comparison.
+- **Supported Image Types**: The application supports the following image formats:
+  - `UTType.png`
+  - `.jpeg`
+  - `.tiff`
+  - `.heic`
+  - `.gif`
+  - `.heif`
+  - `.webP`
+- **Unit Testing**: The application uses the Swift Testing framework for unit tests, ensuring code reliability and functionality.
 
 ## Usage
 
 To launch the application, open your terminal and run the following command:
 
 ```bash
-/path/to/ImageComparison /path/to/image1.png /path/to/image2.png
+/path/to/imageCompare /path/to/image1.png /path/to/image2.png
 ```
 
-Replace `/path/to/ImageComparison` with the actual path to the application and `/path/to/image1.png` and `/path/to/image2.png` with the paths to the images you wish to compare.
+Replace `/path/to/imageCompare` with the actual path to the application and `/path/to/image1.png` and `/path/to/image2.png` with the paths to the images you wish to compare.
 
 ## Screenshots
 
@@ -34,11 +43,11 @@ Replace `/path/to/ImageComparison` with the actual path to the application and `
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ImageComparisonTool.git
+   git clone https://github.com/iiaremenko/ImageCompare.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd ImageComparisonTool
+   cd ImageCompare
    ```
 3. Open the project in Xcode and build the application.
 
