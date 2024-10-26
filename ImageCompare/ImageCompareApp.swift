@@ -58,7 +58,7 @@ struct ImageCompareApp: App {
             openPanel.canChooseFiles = true
             openPanel.canChooseDirectories = true
             openPanel.directoryURL = url.deletingLastPathComponent()
-            openPanel.allowedContentTypes = [.png, .jpeg, .tiff, .heic, .heif, .gif]
+            openPanel.allowedContentTypes = ImageComparisonViewModel.allowedContentTypes
 
             if openPanel.runModal() == .OK, let selectedURL = openPanel.url {
                 do {

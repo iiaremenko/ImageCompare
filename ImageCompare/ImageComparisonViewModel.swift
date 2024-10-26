@@ -49,7 +49,15 @@ import UniformTypeIdentifiers
     var alertMessage = ""
 
     var diffMode: DiffMode = .difference
-    let allowedContentTypes = [UTType.png, .jpeg, .tiff, .heic, .gif, .heif]
+    static let allowedContentTypes = [
+        UTType.png,
+        .jpeg,
+        .tiff,
+        .heic,
+        .gif,
+        .heif,
+        .webP
+    ]
 
     init() {
         self.path1 = nil
