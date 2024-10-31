@@ -123,8 +123,16 @@ private extension ImageComparisonViewModel {
         let url2 = URL(fileURLWithPath: expandedPath2)
 
         do {
-            image1 = try url1.getNSImage()
-            image2 = try url2.getNSImage()
+            image1 = loadImageFrom(path1)
+            image2 = loadImageFrom(path2)
+
+            if image1 == nil {
+                image1 = try url1.getNSImage()
+            }
+
+            if image2 == nil {
+                image2 = try url2.getNSImage()
+            }
         } catch {
             showAlertWithMessage("Failed to load image from path: \(error)")
         }
@@ -198,6 +206,26 @@ private extension ImageComparisonViewModel {
     private func showAlertWithMessage(_ message: String) {
         alertMessage = message
         showAlert = true
+    }
+
+    private func loadImageFrom(_ fileURLString: String) -> NSImage? {
+        guard let fileURL = URL(string: fileURLString) else {
+            print("Invalid file URL string")
+            return nil
+        }
+        do {
+            let data = try Data(contentsOf: fileURL)
+            if let image = NSImage(data: data) {
+                print("Image loaded successfully")
+                return image
+            } else {
+                print("Failed to create image from data")
+            }
+        } catch {
+            print("Error reading data from file: \(error)")
+        }
+
+        return nil
     }
 }
 

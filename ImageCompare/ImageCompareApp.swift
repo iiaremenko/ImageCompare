@@ -20,8 +20,18 @@ struct ImageCompareApp: App {
             firstArgument = NSString(string: arguments[1]).expandingTildeInPath
             secondArgument = NSString(string: arguments[2]).expandingTildeInPath
 
-            let firstURL = URL(fileURLWithPath: firstArgument)
-            let secondURL = URL(fileURLWithPath: secondArgument)
+
+            let firstURL = if firstArgument.contains("file://") {
+                URL(string: firstArgument)!
+            } else {
+                URL(fileURLWithPath: firstArgument)
+            }
+
+            let secondURL = if secondArgument.contains("file://") {
+                URL(string: secondArgument)!
+            } else {
+                URL(fileURLWithPath: secondArgument)
+            }
 
             // Request permission to access the files
             requestPermissionForFile(firstURL)
@@ -42,13 +52,7 @@ struct ImageCompareApp: App {
         }
     }
 
-    // Function to request file access permission using NSOpenPanel
     func requestPermissionForFile(_ url: URL) {
-        if !FileManager.default.fileExists(atPath: url.path) {
-            print("File not found at path: \(url.path)")
-            return
-        }
-
         if url.startAccessingSecurityScopedResource() == false {
             // Use NSOpenPanel to request access to the file
             let openPanel = NSOpenPanel()
